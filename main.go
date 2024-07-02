@@ -146,7 +146,7 @@ func (p *page) generate() error {
 	return nil
 }
 
-var pageNumberRegex = regexp.MustCompile(`.+(\d+)\.?`)
+var pageNumberRegex = regexp.MustCompile(`\s?(\d+)\..{2,4}$`)
 
 // ingestPages walks the directory search path and ingests all matched files into a slice of page metadata structs
 func ingestPages() ([]page, error) {
